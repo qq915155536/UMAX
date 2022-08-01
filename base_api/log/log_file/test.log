@@ -1,0 +1,22 @@
+[32m【2022-07-06 18:58:44,483】  log_api.py  【INFO】  line:40  | info[0m
+[33m【2022-07-06 18:58:44,484】  log_api.py  【WARNING】  line:41  | warning[0m
+[31m【2022-07-06 18:58:44,484】  log_api.py  【ERROR】  line:42  | error[0m
+[1;31m【2022-07-06 18:58:44,484】  log_api.py  【CRITICAL】  line:43  | critical[0m
+[32m【2022-07-06 18:59:03,370】  log_api.py  【INFO】  line:40  | info[0m
+[33m【2022-07-06 18:59:03,370】  log_api.py  【WARNING】  line:41  | warning[0m
+[31m【2022-07-06 18:59:03,370】  log_api.py  【ERROR】  line:42  | error[0m
+[1;31m【2022-07-06 18:59:03,370】  log_api.py  【CRITICAL】  line:43  | critical[0m
+[32m【2022-07-06 19:08:42,839】  log_api.py  【INFO】  line:40  | info[0m
+[33m【2022-07-06 19:08:42,851】  log_api.py  【WARNING】  line:41  | warning[0m
+[31m【2022-07-06 19:08:42,851】  log_api.py  【ERROR】  line:42  | error[0m
+[1;31m【2022-07-06 19:08:42,851】  log_api.py  【CRITICAL】  line:43  | critical[0m
+[32m【2022-07-06 19:24:30,282】  login.py  【INFO】  line:43  | dev环境登录成功！[0m
+[32m【2022-07-06 19:24:30,282】  login.py  【INFO】  line:50  | {'dev': 'http://11.168.3.220:8081/api/', 'test': 'http://11.168.3.220:8082/api/', 'conf': 'dev', 'conf_url': 'http://11.168.3.220:8081/api/', 'base_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36', 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjBjYjRkYTFiNWM4MGI2YzcwZWZjMzU5YTgzZTNiYzZlIiwiaWF0IjoxNjU3MTA2NjcwLCJuYmYiOjE2NTcxMDY2NzAsImV4cCI6MTY1Nzk3MDY3MH0.4vBO4potgYjUxx6GJKSkhI2ZcTn-495P03xpELMQJto'}}[0m
+[32m【2022-07-06 19:26:19,292】  login.py  【INFO】  line:42  | dev环境登录成功！[0m
+[32m【2022-07-06 19:26:19,292】  login.py  【INFO】  line:49  | {'dev': 'http://11.168.3.220:8081/api/', 'test': 'http://11.168.3.220:8082/api/', 'conf': 'dev', 'conf_url': 'http://11.168.3.220:8081/api/', 'base_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36', 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjBjYjRkYTFiNWM4MGI2YzcwZWZjMzU5YTgzZTNiYzZlIiwiaWF0IjoxNjU3MTA2Nzc5LCJuYmYiOjE2NTcxMDY3NzksImV4cCI6MTY1Nzk3MDc3OX0.8klKYx0kxk2EzcuhXA2hC2AybChHYJdajIi_BArJMfE'}}[0m
+[32m【2022-07-06 19:26:59,781】  login.py  【INFO】  line:43  | dev环境登录成功！[0m
+[32m【2022-07-06 19:26:59,782】  login.py  【INFO】  line:50  | {'dev': 'http://11.168.3.220:8081/api/', 'test': 'http://11.168.3.220:8082/api/', 'conf': 'dev', 'conf_url': 'http://11.168.3.220:8081/api/', 'base_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36', 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjBjYjRkYTFiNWM4MGI2YzcwZWZjMzU5YTgzZTNiYzZlIiwiaWF0IjoxNjU3MTA2ODE5LCJuYmYiOjE2NTcxMDY4MTksImV4cCI6MTY1Nzk3MDgxOX0.4R5KvnujfdZ0td0PG13Vtnn6dSIxQN8lYY_spEjQgPE'}}[0m
+[32m【2022-07-06 19:27:33,455】  login.py  【INFO】  line:42  | dev环境登录成功！[0m
+[32m【2022-07-06 19:27:33,455】  login.py  【INFO】  line:49  | {'dev': 'http://11.168.3.220:8081/api/', 'test': 'http://11.168.3.220:8082/api/', 'conf': 'dev', 'conf_url': 'http://11.168.3.220:8081/api/', 'base_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36', 'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjBjYjRkYTFiNWM4MGI2YzcwZWZjMzU5YTgzZTNiYzZlIiwiaWF0IjoxNjU3MTA2ODUzLCJuYmYiOjE2NTcxMDY4NTMsImV4cCI6MTY1Nzk3MDg1M30.-rLc075DOluSOXH6K7Sc7UZYVFoeA33CRVlNzDksLdY'}}[0m
+[32m【2022-07-06 19:48:05,741】  login.py  【INFO】  line:42  | dev环境登录成功！[0m
+[32m【2022-07-06 19:48:05,809】  user_select.py  【INFO】  line:34  | 查询接口，执行成功！[0m
