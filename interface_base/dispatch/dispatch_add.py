@@ -61,6 +61,6 @@ def select_flight(conf, start_time, end_time):
 
 if __name__ == '__main__':
     # 航班时间段：
-    flight_start_time = '2022-08-01 14:20'
-    flight_end_time = '2022-08-01 15:00'
+    flight_start_time = '2022-08-18 06:00'
+    flight_end_time = '2022-08-18 12:00'
     select_flight('dev', flight_start_time, flight_end_time)
