@@ -17,8 +17,8 @@ class JzSession:
         self.conf = conf
         self.conf_url = None
         self.info_dict = {
-            'dev': 'http://11.168.3.186:89/dsApi/',
-            'test': 'http://11.168.3.186:90/dsApi/',
+            'dev': 'http://11.168.3.186:89/',
+            'test': 'http://11.168.3.186:90/',
             'conf': None,
             'conf_url': None
         }

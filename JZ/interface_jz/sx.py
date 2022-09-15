@@ -10,7 +10,7 @@ from jsonpath import jsonpath
 
 session = JzSession('dev')
 # 查询属性
-url = session.conf_url + 'systemExtendAttr/pageQuery'
+url = session.conf_url + 'dsApi/systemExtendAttr/pageQuery'
 param = {
     'moduleFlag': 'F',
     'pageNum': 1,
