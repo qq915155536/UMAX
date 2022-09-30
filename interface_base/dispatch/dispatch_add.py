@@ -32,8 +32,9 @@ def select_flight(conf, start_time, end_time):
         carriers = jsonpath(res1.json(), '$..carrier')
         flight_nums = jsonpath(res1.json(), '$..flightNo')
         flight_info = [i + j for i, j in zip(carriers, flight_nums)]
-        print(len(flight_info))
-        session.logger.info(flight_info)
+        num = len(flight_info)
+        info_log = '航班总数：{0},  航班详情：{1}'.format(num, flight_info)
+        session.logger.info(info_log)
         # 提取航班信息id
         flight_ids = jsonpath(info1, '$..id')
     else:
@@ -62,6 +63,6 @@ def select_flight(conf, start_time, end_time):
 
 if __name__ == '__main__':
     # 航班时间段：
-    flight_start_time = '2022-09-15 00:01'
-    flight_end_time = '2022-09-15 23:59'
+    flight_start_time = '2022-09-29 20:00'
+    flight_end_time = '2022-09-30 20:00'
     select_flight('dev', flight_start_time, flight_end_time)

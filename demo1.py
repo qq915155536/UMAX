@@ -1,4 +1,12 @@
-from collections import Counter
-arr=[1,2,5,1,1,5,6,3,3,2,2,4,8]
-res=Counter(arr)
-print(type(res),res)
+#  ===========================
+# -*- coding:utf-8 -*-
+# Time :2022/7/18 14:37
+# Author :小灬天
+# QQ:915155536
+# File :dispatch_add.py
+#  ===========================
+from interface_base.base_session import BaseSession
+
+session=BaseSession('dev')
+url='ws://11.168.3.235:8081/algorithm/d8e58781be505229e3c87c4159910d04/2'
+session.session.get(url=url)

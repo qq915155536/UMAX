@@ -58,3 +58,4 @@ class BaseSession:
 
 if __name__ == '__main__':
     my_session = BaseSession('dev')
+    # my_session = BaseSession('test')

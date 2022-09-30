@@ -1,19 +1,20 @@
 #  ===========================
 # -*- coding:utf-8 -*-
-# Time :2022/9/6 13:48
+# Time :2022/9/29 10:31
 # Author :小灬天
 # QQ:915155536
-# File :view_calculation_results.py
+# File :view_calculation_free.py
 #  ===========================
+
 from interface_base.base_session import BaseSession
 from jsonpath import jsonpath
 from collections import Counter
 
 
-# 查看计算结果（甘特图），需传入workOrderId
+# 查看计算结果（未派遣任务列表），需传入workOrderId
 def view_calculation_results(workOrderId):
     session = BaseSession('dev')
-    url = session.conf_url + 'algorithmResult/gantt/' + workOrderId
+    url = session.conf_url + 'algorithmResult/menu/gantt/flight/free'
     params = {'workOrderId': workOrderId}
     res = session.session.get(url=url, params=params)
     info = res.json()

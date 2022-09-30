@@ -11,22 +11,12 @@ from interface_base.base_session import BaseSession
 
 # 设置参数
 # 员工工号列表
-employeeNoList = ["2365",
-                  "5242",
-                  "6562",
-                  "6653",
-                  "6847",
-                  "6876",
-                  "8503",
-                  "8558",
+employeeNoList = ["8558",
                   "8597",
                   "2705",
-                  "8584",
-                  "8875",
-                  "10506",
-                  "10526",
-                  "10529",
-                  "10531",
+                  "8545",
+                  "10522",
+                  "10541",
                   "15060",
                   "15125",
                   "16052"]
@@ -37,14 +27,18 @@ employeeNoList = ["2365",
 # onWorkTime = "06:00"
 # offWorkTime = "16:00"
 # 做一休一
-onWorkTime = "06:00"
-offWorkTime = "18:30"
+# onWorkTime = "06:00"
+# offWorkTime = "18:30"
+# 过夜
+onWorkTime = "18:00"
+offWorkTime = "06:30"
+
 
 #调整时间所处日期段
-workDateBegin = "2022-09-17"
-workDateEnd = "2022-09-17"
+workDateBegin = "2022-09-16"
+workDateEnd = "2022-09-16"
 data = {
-    "crossNight": False,
+    "crossNight": True,
     "employeeNoList": employeeNoList,
     "onWorkTime": onWorkTime,
     "offWorkTime": offWorkTime,

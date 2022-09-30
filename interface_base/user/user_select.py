@@ -5,8 +5,6 @@
 # QQ:915155536
 # File :user_select.py
 #  ===========================
-
-
 from interface_base.base_session import BaseSession
 from jsonpath import jsonpath
 
@@ -31,7 +29,6 @@ def user_select(conf):
         session.logger.info(user_name)
     else:
         session.logger.error(res.json())
-
 
 if __name__ == '__main__':
     # 查询指定环境的用户列表信息
