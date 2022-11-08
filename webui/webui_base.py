@@ -1,3 +1,10 @@
+#  ===========================
+# -*- coding:utf-8 -*-
+# Time :2022/7/8 19:22
+# Author :小灬天
+# QQ:915155536
+# File :web_base.py
+#  ===========================
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from webui.chrome_options import Options
@@ -26,6 +33,10 @@ class WebUi:
     def my_send_keys(self, by, value, text):
         self.my_location(by, value).send_keys(text)
 
+    # 清空文本
+    def my_clear(self, by, value):
+        self.my_location(by, value).clear()
+
     # 文本断言
     def my_assert_text(self, by, value, expect):
         try:
@@ -49,6 +60,14 @@ class WebUi:
     # 显式等待
     def my_force_wait(self, by, value):
         return WebDriverWait(self.browser, 10, 0.5).until(lambda el: self.my_location(by, value), message='元素获取失败')
+
+    # 执行js语句
+    def my_js(self, js, obj=None):
+        self.browser.execute_script(js, obj)
+
+    # 刷新浏览器
+    def my_refresh(self):
+        self.browser.refresh()
 
     # 退出浏览器
     def my_quit(self):

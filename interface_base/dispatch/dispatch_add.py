@@ -41,28 +41,63 @@ def select_flight(conf, start_time, end_time):
         session.logger.error('获取航班信息失败，报错如下：')
         session.logger.error(res1.json())
 
-    #   2.准备新增派工的入参及url
-    url2 = session.conf_url + 'workOrder'
+    #  2.选择规则,获得规则详情
+    rule_type_id = '4a5afc59937172de9870b2cbac5b27e9'  # 浦东极限违规
+    # rule_type_id='4a5afc59937172de9870b2cbac5b27e9'  # 浦东轻度违规
+    # rule_type_id='4a5afc59937172de9870b2cbac5b27e9'  #测试环境-自动派工
+    url2 = session.conf_url + 'rule/' + rule_type_id
+    res2 = session.session.get(url=url2)
+    rule_info = res2.json()['data']
+    if res2.json()['code'] == 200:
+        # 新增下一步的规则详情
+        allRuleDTOList = [
+            {'foodRuleAlertTimeDTO': rule_info['foodRuleAlertTime'],
+             'foodRuleConnectionLineDTO': rule_info['foodRuleConnectionLine'],
+             'foodRuleEmployeeQualificationDTO': rule_info['foodRuleQualification'],
+             'foodRuleFleetShipDTO': rule_info['foodRuleFleetShipVO'],
+             'foodRuleJoinTimeDTO': rule_info['foodRuleJoinTime'],
+             'foodRuleLoadingTimeDTO': rule_info['foodRuleLoadingTime'],
+             'foodRuleMealTimeDTO': rule_info['foodRuleMealTime'],
+             'foodRuleRegionTimeDTO': rule_info['foodRuleRegionTime'],
+             'foodRuleScheduleTimeDTO': rule_info['foodRuleScheduleTime'],
+             'foodRuleTeamDTO': rule_info['foodRuleTeam'],
+             'foodRuleTeamTimeDTO': rule_info['foodRuleTeamTime'],
+             'foodRuleTimeDTO': rule_info['foodRuleTime'],
+             'ruleTypeId': rule_type_id,
+             'ruleTypeName': "浦东极限违规"
+             }
+        ]
+        session.logger.info('所选规则的详情为：')
+        session.logger.info(allRuleDTOList)
+    else:
+        session.logger.error('所选规则有误！')
+        session.logger.error(res2.json())
+
+    #   3.准备新增派工的入参及url
+    url3 = session.conf_url + 'workOrder'
     now_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     data = {
+        'allRuleDTOList': allRuleDTOList,
         'flightIds': flight_ids,
+        'isInitTask': 0,  # 自动-算法计算
+        # 'isInitTask': 1,  # 手动-人工排班
         'orderName': '【测试脚本生成】' + now_time,
         'orderTimeBegin': start_time,
         'orderTimeEnd': end_time,
-        'ruleTypeId': '1a7371325efd1e113920df8584f3a429'
+        'ruleTypeIdList': [rule_type_id]
     }
-    res2 = session.session.post(url=url2, json=data)
-    info2 = res2.json()
-    if info2['code'] == 200:
+    res3 = session.session.post(url=url3, json=data)
+    info3 = res3.json()
+    if info3['code'] == 200:
         order_name = data['orderName']
         session.logger.info(f'派工任务，新增成功,任务名为:{order_name}')
     else:
         session.logger.error('新增失败！')
-        session.logger.error(info2)
+        session.logger.error(info3)
 
 
 if __name__ == '__main__':
     # 航班时间段：
-    flight_start_time = '2022-09-29 20:00'
-    flight_end_time = '2022-09-30 20:00'
+    flight_start_time = '2022-11-08 08:00'
+    flight_end_time = '2022-11-08 21:00'
     select_flight('dev', flight_start_time, flight_end_time)

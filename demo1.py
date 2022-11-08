@@ -1,12 +1,13 @@
 #  ===========================
 # -*- coding:utf-8 -*-
-# Time :2022/7/18 14:37
+# Time :2022/7/8 19:22
 # Author :小灬天
 # QQ:915155536
-# File :dispatch_add.py
+# File :web_base.py
 #  ===========================
 from interface_base.base_session import BaseSession
 
-session=BaseSession('dev')
-url='ws://11.168.3.235:8081/algorithm/d8e58781be505229e3c87c4159910d04/2'
-session.session.get(url=url)
+rule_id='4a5afc59937172de9870b2cbac5b27e9'
+session = BaseSession('dev')
+
+
